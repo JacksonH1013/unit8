@@ -1,13 +1,17 @@
 countries = ["USA", "France", "India", "Germany", "Japan","Mexico", "Canada", "Brazil", "South Africa", "Italy"]
+
 years = [1776, 1792, 1947, 1871, 660, 1821, 1867, 1822, 1910, 1861]
+
 leaders = ["George Washington", "Maximilien Robespierre", "Jawaharlal Nehru", "Otto von Bismarck", "Emperor Jimmu", "Agustín de Iturbide", "John A. Macdonald", "Dom Pedro I", "Louis Botha", "Victor Emmanuel II"]
 
 def print_all():
+
     print("\nCountry List")
     for i in range(len(countries)):
         print(f"{i+1}. {countries[i]} | Year Formed: {years[i]} | First Leader: {leaders[i]}")
 
 def add_item():
+
     country = input("Enter country name: ")
     try:
         year = int(input("Enter year of formation: "))
@@ -20,12 +24,14 @@ def add_item():
         print("Invalid year")
 
 def print_sorted_countries():
+
     print("\n Sorted Country Names")
     sorted_list = sorted(countries)
     for country in sorted_list:
         print(country)
 
 def search_country():
+
     search = input("Search a Country ").strip()
     if search in countries:
         index = countries.index(search)
@@ -34,6 +40,7 @@ def search_country():
         print("Country not found")
         
 def remove_country():
+
     to_remove = input("Remove a country: ").strip()
     if to_remove in countries:
         index = countries.index(to_remove)
@@ -45,6 +52,7 @@ def remove_country():
         print("Country not found")
 
 def menu():
+
     while True:
         print("1. View all countries")
         print("2. Add a country")
@@ -53,7 +61,7 @@ def menu():
         print("5. Remove a country")
         print("6. Exit")
         choice = input("Choose an option (1–6): ")
-
+        
         if choice == "1":
             print_all()
         elif choice == "2":
